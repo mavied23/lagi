@@ -11,9 +11,7 @@ class UserController extends Controller
         $users = User::all();
         return view('users.index', compact('users'));
     }
-    public function create(){
-        return view('users.create');
-    }
+
     public function store(Request $request){
         $request->validate([
             'name'=>'required',
@@ -22,7 +20,7 @@ class UserController extends Controller
         User::create($request->all());
         return redirect()->route('user.create')->with('success', 'User created successfully.');
     }
-    public function edit($id){
+    public function edit(User $user){
         $users = User::all();
         return view('users.edit', compact('user'));
     }
