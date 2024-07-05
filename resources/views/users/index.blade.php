@@ -13,6 +13,7 @@
     <div class="container mt-5">
         <h1 class="text-center mb-4">Data Pengguna</h1>
         <table class="table table-striped table-hover">
+            <button class="btn btn-info btn-sm" onclick="window.location.href = '/home';"><--Kembali ke Home</button><br><br><br>
             <thead>
                 <tr>
                     <th>Nama</th>
